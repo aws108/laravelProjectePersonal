@@ -17,14 +17,14 @@
         @if( true || Auth::check() )
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li{{ Request::is('catalog*') && !Request::is('catalog/create')? ' class=active' : ''}}>
-                    <a href="{{url('/catalog')}}">
+                <li{{ Request::is('producto*') && !Request::is('producto/create')? ' class=active' : ''}}>
+                    <a href="{{url('/producto')}}">
                         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
                         Catálogo de Productos
                     </a>
                 </li>
                 <li{{ Request::is('catalog/create') ? ' class=active' : ''}}>
-                    <a href="{{url('/catalog/create')}}">
+                    <a href="{{url('/producto/create')}}">
                         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
                         Nueva producto
                     </a>

@@ -29,6 +29,13 @@
 
 					<div class="form-group">
 						<!--Completa el input para el año -->
+						<label for="categoria">Categoria</label>
+						<br/>
+						<input type="text" name="categoria" id="categoria" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<!--Completa el input para el año -->
 						<label for="precio">Precio</label>
 						<br/>
 						<input type="text" name="precio" id="precio" class="form-control">

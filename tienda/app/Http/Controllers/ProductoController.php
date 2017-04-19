@@ -24,11 +24,12 @@ class ProductoController extends Controller
 
 	public function update(Request $request, $id) {
         $pr = Producto::find($id);
-        if( $request->has("nombre") && $request->has("precio") &&
+        if( $request->has("nombre") && $request->has("categoria")&& $request->has("precio") &&
             $request->has("cantidad") && $request->has("imagen") &&
             $request->has("resumen")
         ) {
             $pr->nombre = $request->input("nombre");
+        	$pr->categoria = $request->input("categoria");
             $pr->precio = $request->input("precio");
             $pr->cantidad = $request->input("cantidad");
             $pr->imagen = $request->input("imagen");
@@ -52,15 +53,16 @@ class ProductoController extends Controller
     // ve del CREATE 
     public function store(Request $request) {
         $pr = new Producto();
-        if( $request->has("nombre") && $request->has("precio") &&
+        if( $request->has("nombre") && $request->has("categoria") && $request->has("precio") &&
             $request->has("cantidad") && $request->has("imagen") &&
             $request->has("resumen")
         ) {
-            $pr->title = $request->input("nombre");
-            $pr->year = $request->input("precio");
-            $pr->director = $request->input("cantidad");
-            $pr->poster = $request->input("imagen");
-            $pr->synopsis = $request->input("resumen");
+            $pr->nombre = $request->input("nombre");
+        	$pr->categoria = $request->input("categoria");
+            $pr->precio = $request->input("precio");
+            $pr->cantidad = $request->input("cantidad");
+            $pr->imagen = $request->input("imagen");
+            $pr->resumen = $request->input("resumen");
             $pr->rented = false;
             $pr->save();
             return "Stored OK.<br>

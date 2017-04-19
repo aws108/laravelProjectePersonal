@@ -16,6 +16,10 @@
 		</h2>
 
 		<h4 style="min-height: 45px;margin: 5px 0 10px 0">
+        	Categoria: {{$produ['categoria']}}
+		</h4>
+
+		<h4 style="min-height: 45px;margin: 5px 0 10px 0">
         	Precio: {{$produ['precio']}}
 		</h4>
 
